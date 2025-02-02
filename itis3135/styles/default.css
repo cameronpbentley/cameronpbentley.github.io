@@ -153,3 +153,9 @@ figcaption {
     font-style: italic;
 }
 
+/* moved .validation-img style to my stylesheet */
+.validation-img {
+    border: 0;
+    width: 88px;
+    height: 31px;
+}
