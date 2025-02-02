@@ -3,19 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITIS3135 First Course Page</title>
+    <title>Curious Badger || ITIS 3135 || HOME</title>
+    <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        /* Move the inline styles to the CSS block */
+        .validation-img {
+            border: 0;
+            width: 88px;
+            height: 31px;
+        }
+    </style>
 </head>
 <body>
-
-    <h1>I am Cameron Bentley and this is my ITIS3135 First Course Page</h1>
-    <p>This is the site for my web-based work for my ITIS3135 class</p>
-
-    <ul>
-        <!--  add links here later -->
-    </ul>
-
-    
-
+    <header>
+        <h1>Cameron Bentley || ITIS 3135</h1>
+        <nav>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="contract.html">Contract</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>ITIS 3135 Home</h2>
+        <p>Yo, what's up? Welcome to my ITIS 3135 page! Here's where you’ll find my class projects, assignments, and whatever else I throw together while learning how to code.</p>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="https://webpages.charlotte.edu/cbentle6/">UNCC Homepage</a></li>
+            <li><a href="https://github.com/cameronpbentley/">GitHub Repo</a></li>
+            <li><a href="https://cameronpbentley.github.io/">GitHub.io Page</a></li>
+            <li><a href="https://cameronpbentley.github.io/itis3135/">GitHub.io Course Page</a></li>
+            <li><a href="https://www.freecodecamp.org/cbentle6">FreeCodeCamp</a></li>
+            <li><a href="https://www.codecademy.com/profiles/cbentle6">Codecademy</a></li>
+            <li><a href="https://www.linkedin.com/in/cameron-bentley-432437299/">LinkedIn</a></li>
+        </ul>
+        <p>Designed by Cameron Bentley Enterprises © 2025</p>
+        <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">
+            <img class="validation-img" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
+        </a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation-link-css">
+            <img class="validation-img" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
+        </a>
+    </footer>
+    <script>
+        document.getElementById("validation-link-html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+        document.getElementById("validation-link-css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
 </body>
 </html>

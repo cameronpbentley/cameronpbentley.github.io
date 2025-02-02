@@ -1,0 +1,155 @@
+/* reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+}
+
+/* body color and layout */
+body {
+    background-color: #f9f9f9; /* light gray */
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* header style */
+header {
+    background: #004e8c; /* deep blue */
+    color: white;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* nav bar - same color as header */
+nav ul {
+    list-style: none;
+    padding: 10px;
+    background: #004e8c; /* deep blue */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+/* hover effect */
+nav ul li a:hover {
+    background: #003b6f; /* darker blue */
+    border-radius: 5px;
+}
+
+/* main section */
+main {
+    padding: 30px;
+    background: white;
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    color: #004e8c; /* deep blue */
+    margin-bottom: 15px;
+}
+
+/* footer */
+footer {
+    background: #7d2e3e; /* deep red */
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* images */
+figure {
+    margin: 20px auto;
+    text-align: center;
+}
+
+figure img {
+    max-width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+figcaption {
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* mobile layout */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+}
+
+.centered-italic {
+    text-align: center;
+    font-style: italic;
+}
+
+/* Style for the image container and the caption */
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 200px;
+}
+
+.image-container figcaption {
+    font-style: italic;
+}
+
