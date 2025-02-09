@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cameron Bentley Enterprises</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset and Basic Styles */
+        body, h1, h2, p, ul {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lora', serif; /* Lora for body text */
+            background-color: #FFFCF2; /* Off-white background */
+            color: #403D39; /* Dark grey text */
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            background-color: #FFFFFF;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #403D39; /* Dark grey */
+            font-family: 'Roboto Slab', serif; /* Roboto Slab for headers */
+            margin-left: 20px; /* Add some space between the logo and the text */
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #403D39; /* Dark grey */
+            font-size: 1.1rem;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #EB5E28; /* Vibrant orange on hover */
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('https://via.placeholder.com/1200x800');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #EB5E28; /* Vibrant orange */
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            color: #FFFCF2; /* Off-white */
+        }
+
+        .cta-button {
+            padding: 15px 30px;
+            background-color: #EB5E28; /* Vibrant orange */
+            color: white;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #D15118; /* Darker orange for hover */
+        }
+
+        /* Main Content Section */
+        .main-content {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #FFFFFF; /* White background for content */
+        }
+
+        .main-content h2 {
+            font-size: 3rem;
+            color: #403D39; /* Dark grey */
+            margin-bottom: 20px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .main-content p {
+            font-size: 1.2rem;
+            color: #CCC5B9; /* Beige */
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* About Us Section - New styles */
+        .main-content h3 {
+            font-size: 2rem;
+            color: #EB5E28; /* Vibrant orange */
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            color: #403D39; /* Dark grey */
+            line-height: 1.6;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #EB5E28; /* Vibrant orange bullet */
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 20px;
+            background-color: #EB5E28; /* Vibrant orange background */
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #FFFCF2; /* Off-white */
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact input,
+        .contact textarea {
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #403D39;
+        }
+
+        .contact button {
+            padding: 15px 30px;
+            background-color: #403D39; /* Dark grey */
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background-color: #D15118; /* Darker orange on hover */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #FFFFFF; /* White */
+            padding: 40px 20px;
+            text-align: center;
+            color: #CCC5B9; /* Beige */
+            border-top: 1px solid #E1E1E1;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3rem;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .main-content h2 {
+                font-size: 2.5rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+
+            ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth Scroll for Sections */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <img src="https://images.vexels.com/media/users/3/137578/isolated/preview/c895a61e637f53ac91d5faf634c84794-cube-logo-geometric-polygonal.png" alt="Geometric Website Logo" width="50" height="50">
+        <h1>Cameron Bentley Enterprises</h1>
+    </div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Innovative Solutions Tailored To Your Vision</h2>
+    <p style="color: #252422;">We specialize in design, development, and strategy to bring your vision to life.</p>
+    <button class="cta-button">Get Started</button>
+</section>
+
+<section class="main-content" id="about">
+    <h2>About Us</h2>
+    <p>At Cameron Bentley Enterprises, we are committed to delivering creative and effective solutions to businesses across various sectors. We focus on design excellence, technological innovation, and providing customized services that meet our clients’ unique needs.</p>
+
+    <h3>What We Offer:</h3>
+    <ul>
+        <li>Custom website development tailored to your business needs.</li>
+        <li>Brand consulting and digital marketing strategies.</li>
+        <li>Comprehensive design services that bring your vision to life.</li>
+        <li>Expert solutions for growing your business online.</li>
+        <li>Personalized consulting to help you reach your goals.</li>
+        <li>Strategic planning for both short-term and long-term success.</li>
+        <li>Cutting-edge technology integration for efficient solutions.</li>
+        <li>Creative problem-solving for any challenges your business faces.</li>
+        <li>Collaborative partnerships to ensure the best results.</li>
+        <li>Ongoing support to keep your business evolving with the times.</li>
+    </ul>
+</section>
+
+<section class="main-content" id="services">
+    <h2>Our Services</h2>
+    <p>Our team offers a wide range of services, from website development to brand consulting and digital marketing. We help businesses grow by creating tailored strategies that work.</p>
+</section>
+
+<section class="main-content" id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions or need help? Reach out to us, and we’ll get back to you as soon as possible!</p>
+    <p>Email us at: <a href="mailto:contact@cameronbentley.com">contact@cameronbentleyenterprises.com</a></p>
+</section>
+
+
+<footer>
+    <p>&copy; 2025 Designed by Cameron Bentley Enterprises | <em>Innovative Solutions Tailored To Your Vision</em></p>
+</footer>
+
+</body>
+</html>

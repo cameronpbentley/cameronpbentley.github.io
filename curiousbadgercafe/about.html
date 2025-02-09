@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Curious Badger Cafe</title>
+    <style>
+        /* Palette from COOLORS: https://coolors.co/palette/f6bd60-f7ede2-f5cac3-84a59d-f28482 */
+        :root {
+            --sunshine-yellow: #f6bd60;
+            --soft-cream: #f7ede2;
+            --pale-rose: #f5cac3;
+            --serene-blue: #84a59d;
+            --blush-pink: #f28482;
+        }
+
+        /* styles */
+        body {
+            font-family: 'Georgia', sans-serif;
+            background-color: var(--soft-cream);
+            color: var(--serene-blue);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* header h */
+        header {
+            background-color: var(--blush-pink);
+            color: var(--soft-cream);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        header img {
+            max-width: 80px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        /* nav */
+        nav {
+            background-color: var(--sunshine-yellow);
+            padding: 15px;
+            border-radius: 0 0 10px 10px;
+            width: 100%;
+        }
+
+        nav a {
+            color: var(--serene-blue);
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--pale-rose);
+            color: var(--blush-pink);
+            border-radius: 5px;
+        }
+
+        /* main main */
+        main {
+            padding: 60px 20px;
+        }
+
+        h2, .slogan {
+            color: var(--blush-pink);
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 10px auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .slogan {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        /* about us */
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-info {
+            background-color: var(--soft-cream); 
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: var(--serene-blue); 
+        }
+
+        .about-info h3 {
+            color: var(--blush-pink); 
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .about-info p {
+            color: var(--serene-blue); 
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* higher contrast sectioness */
+        .about-content > div:nth-child(odd) {
+            background-color: var(--soft-cream); 
+            color: var(--serene-blue); 
+        }
+
+        .about-content > div:nth-child(even) {
+            background-color: var(--soft-cream); 
+            color: var(--serene-blue); 
+        }
+
+        /* foot */
+        footer {
+            background-color: var(--serene-blue);
+            color: var(--soft-cream);
+            padding: 15px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer .tagline {
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .footer-link {
+            color: inherit;
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        .footer-link:hover {
+            color: var(--blush-pink);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- header -->
+    <header>
+        <img src="https://cdn-icons-png.freepik.com/512/8652/8652442.png" alt="Curious Badger Cafe Logo" width="100" style="height:auto;">
+        <h1>Curious Badger Cafe</h1>
+    </header>
+
+    <!-- navv -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <!-- mainnn -->
+    <main>
+        <h2>About Us</h2>
+        <div class="about-content">
+            <div class="about-info">
+                <h3>Our Story</h3>
+                <p>Curious Badger Cafe was founded in the heart of Bloomtown, nestled inside a charming vintage greenhouse. We are passionate about creating a serene and creative environment where guests can unwind and enjoy delightful, flower-infused beverages and freshly baked pastries. Inspired by nature and creativity, we hope to bring a little magic to your everyday life.</p>
+            </div>
+
+            <div class="about-info">
+                <h3>Our Mission</h3>
+                <p>At Curious Badger Cafe, we aim to offer a peaceful retreat where our guests can enjoy high-quality, locally sourced ingredients in an atmosphere filled with the beauty of nature. Our seasonal menu features unique floral-inspired treats, perfect for reading, relaxing, or spending time with friends.</p>
+            </div>
+
+            <div class="about-info">
+                <h3>Our Values</h3>
+                <p>We are committed to sustainability, creativity, and community. Our cafe celebrates the beauty of the natural world while supporting local farmers and artisans. We believe in fostering connections through good food, great conversations, and a welcoming atmosphere.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 <a href="index.html" class="footer-link">Curious Badger Cafe</a> | Designed by: <a href="../itis3135/cameronbentleyenterprises.com/" class="footer-link">CameronBentleyEnterprises</a></p>
+        <p class="tagline"><i>Where nature blooms in every cup</i></p>
+    </footer>
+
+</body>
+</html>

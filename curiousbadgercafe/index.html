@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curious Badger Cafe</title>
+    <style>
+        /* Palette from COOLORS: https://coolors.co/palette/f6bd60-f7ede2-f5cac3-84a59d-f28482 */
+        :root {
+            --sunshine-yellow: #f6bd60;
+            --soft-cream: #f7ede2;
+            --pale-rose: #f5cac3;
+            --serene-blue: #84a59d;
+            --blush-pink: #f28482;
+            --feature-bg: #f3a1a1; /* New color for feature boxes */
+            --feature-text: #f28482; /* New text color for feature boxes */
+        }
+
+        /* Styles https://coolors.co/palette/f6bd60-f7ede2-f5cac3-84a59d-f28482 */
+        body {
+            font-family: 'Georgia', sans-serif;
+            background-color: var(--soft-cream);
+            color: var(--serene-blue);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--blush-pink);
+            color: var(--soft-cream);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+
+        header img {
+            max-width: 80px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        /* Nav */
+        nav {
+            background-color: var(--sunshine-yellow);
+            padding: 15px;
+            border-radius: 0 0 10px 10px;
+            width: 100%;
+        }
+
+        nav a {
+            color: var(--serene-blue);
+            text-decoration: none;
+            padding: 15px 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--pale-rose);
+            color: var(--blush-pink);
+            border-radius: 5px;
+        }
+
+        /* Main */
+        main {
+            padding: 40px 20px;
+        }
+
+        h2, .slogan {
+            color: var(--blush-pink);
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        p {
+            max-width: 800px;
+            margin: 10px auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .slogan {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        /* Why Us */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 50px; /* Increased space between paragraph and sections */
+        }
+
+        .feature {
+            background-color: var(--feature-bg);
+            padding: 15px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 1.1em;
+            text-align: center;
+            color: var(--soft-cream); /* New text color for features */
+        }
+
+        /* Contact */
+        .contact-info {
+            background-color: var(--soft-cream);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 50px;
+            display: inline-block;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: var(--blush-pink);
+            font-size: 1.5em;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--serene-blue);
+            color: var(--soft-cream);
+            padding: 15px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer .tagline {
+            font-style: italic;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* Link styling for footer */
+        .footer-link {
+            color: inherit; /* Inherit the color of surrounding text */
+            text-decoration: none; /* Remove underline */
+            font-weight: normal;
+        }
+
+        .footer-link:hover {
+            color: var(--blush-pink); /* Hover effect color */
+            text-decoration: underline; /* Add underline when hovered */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="https://cdn-icons-png.freepik.com/512/8652/8652442.png" alt="Curious Badger Cafe Logo" width="100" style="height:auto;">
+        <h1>Curious Badger Cafe</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Welcome to Curious Badger Cafe</h2>
+        <p>Curious Badger Cafe is a hidden gem nestled inside a vintage greenhouse, offering an experience that blends nature and creativity. We serve a delightful selection of flower-infused drinks and pastries, providing the perfect escape for anyone seeking a peaceful retreat. With a cozy atmosphere and a touch of nature, every visit invites relaxation. It's a place where creativity and calm come together in every sip.</p>
+
+        <div class="features">
+            <div class="feature">🌿 Cozy, calming atmosphere surrounded by greenery.</div>
+            <div class="feature">🍵 Unique flower-infused drinks and pastries.</div>
+            <div class="feature">🍃 Locally sourced, high-quality ingredients.</div>
+            <div class="feature">📖 Perfect for reading, relaxing, or meeting friends.</div>
+            <div class="feature">🌸 Seasonal menu inspired by floral offerings.</div>
+        </div>
+
+        <div class="contact-info">
+            <h3>We'd Love to Hear from You!</h3>
+            <p><strong>Email:</strong> contact@curiousbadgercafe.com</p>
+            <p><strong>Phone:</strong> (555) 123-4567</p>
+            <p><strong>Address:</strong> 123 Greenhouse Lane, Bloomtown, BL 45678</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 <a href="index.html" class="footer-link">Curious Badger Cafe</a> | Designed by: <a href="../itis3135/cameronbentleyenterprises.com/" class="footer-link">CameronBentleyEnterprises</a></p>
+        <p class="tagline"><em>Where nature blooms in every cup</em></p>
+    </footer>
+
+</body>
+</html>
