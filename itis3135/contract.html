@@ -9,14 +9,9 @@
 </head>
 <body>
     <header>
-        <h1>Cameron Bentley || ITIS 3135</h1>
-        <nav>
-            <ul>
-                <li><a href="./">Home</a></li>
-                <li><a href="introduction.html">Introduction</a></li>
-                <li><a href="contract.html">Contract</a></li>
-            </ul>
-        </nav>
+        <header>
+            <div data-include="components/header.html"></div>
+        </header>
     </header>
     <main>
         <h2>Contract Agreement</h2>
@@ -24,22 +19,12 @@
         <p><i>Signed: Cameron Bentley, 01 February 2025</i></p>
     </main>
     <footer>
-        <ul>
-            <li><a href="https://webpages.charlotte.edu/cbentle6/">UNCC Homepage</a></li>
-            <li><a href="https://github.com/cameronpbentley/">GitHub Repo</a></li>
-            <li><a href="https://cameronpbentley.github.io/">GitHub.io Page</a></li>
-            <li><a href="https://cameronpbentley.github.io/itis3135/">GitHub.io Course Page</a></li>
-            <li><a href="https://www.freecodecamp.org/cbentle6">FreeCodeCamp</a></li>
-            <li><a href="https://www.codecademy.com/profiles/cbentle6">Codecademy</a></li>
-            <li><a href="https://www.linkedin.com/in/cameron-bentley-432437299/">LinkedIn</a></li>
-        </ul>
-        <p>Designed by <a href="cameronbentleyenterprises.com/" style="color: #FFFFFF;">Cameron Bentley Enterprises</a> © 2025</p>
-        <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">
-            <img class="validation-img" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!">
-        </a>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation-link-css">
-            <img class="validation-img" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!">
-        </a>
+        <div data-include="components/footer.html"></div>
     </footer>
+    <script>
+        document.getElementById("validation_link_html"). setAttribute("href", "https://validator.w3.org/check?uri=referer");
+        document.getElementById("validation_link_css"). setAttribute("href", "https://jigsaw.w3.org/css-validator/check/referer");
+    </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
