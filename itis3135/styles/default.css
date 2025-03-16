@@ -2,7 +2,7 @@
 html, body, div, span, h3, h4, h5, h6, p, a, img, ul, ol, li, figure, figcaption {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensure consistent box model */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -74,11 +74,13 @@ nav ul li a:hover {
 main {
     padding: 30px;
     background: white;
-    max-width: 80%;
+    max-width: 1200px; /* Added max-width */
+    width: 90%; /* Added percentage width */
     margin: 20px auto; /* Center the main section */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center; /* Ensure main content is centered */
+    box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 /* footer */
@@ -88,6 +90,7 @@ footer {
     padding: 15px;
     margin-top: 20px;
     text-align: center; /* Ensure footer content is centered */
+    box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 footer ul {
@@ -119,6 +122,7 @@ footer p {
 figure {
     margin: 20px auto;
     text-align: center;
+    box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 figure img {
@@ -157,6 +161,7 @@ figcaption {
 /* Style for the image container and the caption */
 .image-container {
     text-align: center;
+    box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 .image-container img {
@@ -198,6 +203,7 @@ h3 a:active {
 /* website eval */
 .website-evaluation-main {
     padding: 30px; 
+    box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 .website-evaluation-h2 {
@@ -210,6 +216,7 @@ h3 a:active {
     background-color: white; 
     border-radius: 10px; /* rounded */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow*/
+    box-sizing: border-box; /* Include padding and border in width/height */
 }
 
 .website-evaluation-h3 {
@@ -229,4 +236,30 @@ h3 a:active {
 .website-evaluation-ul li {
     margin-bottom: 10px; /* space between items */
     line-height: 1.5; /* line spacing for items */
+}
+
+/* media queries - responsive design */
+/* rule overrides for laptops/small screens */
+@media screen and (min-width: 981px) and (max-width: 1400px) {
+    main {
+        max-width: 1100px;
+    }
+}
+
+/* rule overrides - tablet devices */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    main {
+        max-width: 800px;
+    }
+}
+
+/* rule overrides - mobile devices */
+@media screen and (max-width: 600px) {
+    main {
+        max-width: 95%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
 }

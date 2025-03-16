@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobby: Photography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        /* embedded stylesheet for the whole site */
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: #FEFAE0; /* light cream */
+            color: #283618; /* darkest green */
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* ensures the footer sticks to the bottom */
+        }
+        header {
+            background-color: #606C38; /* lighter green */
+            color: #FEFAE0; /* light cream */
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 4em;
+            font-family: 'Playfair Display', serif; /* fancy serif font for that extra flair */
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #606C38; /* dark green */
+            padding: 15px 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center; /* center-align those navbar links */
+        }
+        nav a {
+            color: #FEFAE0; /* light cream */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            background-color: #606C38; /* lighest green */
+        }
+        nav a:hover {
+            background-color: #DDA15E; /* warm orange */
+            color: #283618; /* darker green */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        nav a.active {
+            background-color: #DDA15E; /* warm orange */
+            color: #283618; /* darkest green */
+            border: 2px solid #FEFAE0; /* light cream */
+        }
+        main {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1; /* pushes the footer to bottom */
+        }
+        section {
+            background-color: #FEFAE0; /* light cream */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            display: none; /* hides all sections by default */
+            opacity: 0; /* start hidden for transition */
+            transform: translateY(20px); /* start slightly below for transition */
+            transition: opacity 0.3s ease, transform 0.3s ease; /* smooth transition */
+        }
+        section.active {
+            display: block; /* shows active section */
+            opacity: 1; /* fully visible */
+            transform: translateY(0); /* move to normal position */
+        }
+        h2 {
+            color: #BC6C25; /* rusty orange */
+            border-bottom: 3px solid #DDA15E; /* warm orange */
+            padding-bottom: 10px;
+            font-size: 2.5em;
+            margin-top: 0;
+            text-align: center;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figure img {
+    max-width: 100%;
+    width: 400px; /* Adjust this value as needed */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+        figure img:hover {
+            transform: scale(1.05); /* adds a little zoom effect for fun */
+        }
+        figcaption {
+            font-style: italic;
+            color: #606C38; /* light green */
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        footer {
+            background-color: #283618; /* darker green */
+            color: #FEFAE0; /* light cream */
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: auto; /* keeps the footer at the bottom */
+        }
+        footer a {
+            color: #DDA15E; /* warm orange */
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 700;
+        }
+        footer a:hover {
+            text-decoration: underline; /* adds a little underline on hover */
+        }
+        .validation-buttons {
+            margin-top: 15px;
+        }
+        .validation-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #BC6C25; /* rusty orange */
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        .validation-button:hover {
+            background-color: #DDA15E; /* warm orange */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Hobby: Photography</h1>
+    </header>
+    <nav>
+        <a href="#what" onclick="showSection('what')">What</a>
+        <a href="#who" onclick="showSection('who')">Who</a>
+        <a href="#when" onclick="showSection('when')">When</a>
+        <a href="#where" onclick="showSection('where')">Where</a>
+        <a href="#how" onclick="showSection('how')">How</a>
+        <a href="#why" onclick="showSection('why')">Why</a>
+        <a href="#ai-prompts" onclick="showSection('ai-prompts')">AI Prompts</a>
+    </nav>
+    <main>
+        <!-- what -->
+        <section id="what" class="active">
+            <h2>What is Photography?</h2>
+            <p>Photography is the art of capturing light with a camera to create images, allowing us to freeze moments in time and express creativity through composition, lighting, and subject matter.</p>
+            <figure>
+                <img src="images/mycamera.jpg" alt="A professional camera" loading="lazy">
+                <figcaption>My camera that I use for a majority of my photos.</figcaption>
+            </figure>
+        </section>
+
+        <!-- who  -->
+        <section id="who">
+            <h2>Who Am I?</h2>
+            <p>I'm Cameron Bentley, a passionate photographer capturing the beauty of the world, with particular interest in landscape, portrait, and storytelling photography</p>
+            <figure>
+                <img src="images/portait.jpg" alt="Me with a camera" loading="lazy">
+                <figcaption>A portrait photo of me taken with my camera.</figcaption>
+            </figure>
+        </section>
+
+        <!-- when  -->
+        <section id="when">
+            <h2>Best Times for Photography</h2>
+            <p>The best times for photography are during the golden hours—shortly after sunrise and before sunset—when the light is soft and warm.</p>
+            <figure>
+                <img src="images/when.jpeg" alt="Sunset photography" loading="lazy">
+                <figcaption>A photo of mine that I believe has great natural lighting during this time.</figcaption>
+            </figure>
+        </section>
+
+        <!-- where  -->
+        <section id="where">
+            <h2>Best Locations</h2>
+            <p>Some of the best photography locations include national and state parks, urban landscapes, and coastal areas, each offering unique opportunities for capturing stunning shots.</p>
+            <figure>
+                <img src="images/best.jpeg" alt="A scenic location" loading="lazy">
+                <figcaption>A scenic location from my trip to the UK at the Giant's Causeway.</figcaption>
+            </figure>
+        </section>
+
+        <!-- how  -->
+        <section id="how">
+            <h2>How to Get Started</h2>
+            <p>To get started with photography, all you need is a camera, a keen eye for composition, and a willingness to experiment with different techniques while expressing your own unique perspective.</p>
+            <figure>
+                <img src="images/essentials.jpg" alt="Getting started with photography" loading="lazy">
+                <figcaption>A camera bag with some of the essential gear for beginner and experienced photographers.</figcaption>
+            </figure>
+        </section>
+
+        <!-- why  -->
+        <section id="why">
+            <h2>Why I Love Photography</h2>
+            <p>Photography lets me express my creativity, capture meaningful moments, and share my unique perspective with the world. I find it to be a deeply fulfilling and rewarding passion.</p>
+            <figure>
+                <img src="images/moments.jpeg" alt="Why I love photography" loading="lazy">
+                <figcaption>My girlfriend and I at the Golden Gate Bridge, San Fransisco (a captured memory).</figcaption>
+            </figure>
+        </section>
+
+        <!-- ai prompts -->
+<section id="ai-prompts">
+    <h2>AI Prompts</h2>
+    <p>Here are the prompts I used with AI to assist in creating parts of this site:</p>
+    <ul>
+        <li>
+            <strong>Prompt for Image Hover Effect:</strong>
+            <em>"Write CSS to create a hover effect on images that slightly zooms in on them and adds a soft shadow when hovered over. Include smooth transitions for both the zoom and shadow effect."</em>
+            <br>
+            <strong>AI Model:</strong> ChatGPT
+        </li>
+        <li>
+            <strong>Prompt for Footer Button Hover Effect:</strong>
+            <em>"Write CSS to create footer buttons that rise slightly and have an underline when hovered over. Include smooth transitions for both the hover effect and the underline."</em>
+            <br>
+            <strong>AI Model:</strong> ChatGPT
+        </li>
+        <li>
+            <strong>Prompt for JavaScript Functionality:</strong>
+            <em>"Write JavaScript to show and hide sections of the page with smooth transitions and highlight the active navigation link."</em>
+            <br>
+            <strong>AI Model:</strong> ChatGPT
+        </li>
+        <li>
+            <strong>Prompt for Validation Buttons:</strong>
+            <em>"Write JavaScript to handle the functionality of validation buttons in the footer that allow users to check HTML, CSS, and Accessibility validation of the site when clicked."</em>
+            <br>
+            <strong>AI Model:</strong> ChatGPT
+        </li>
+    </ul>
+</section>
+    </main>
+    <footer>
+        <p>Designed by <a href="../cameronbentleyenterprises.com/" style="color: #DDA15E;">Cameron Bentley Enterprises</a> © 2025</p>
+        <div class="validation-buttons">
+            <a href="https://validator.w3.org/check?uri=referer" class="validation-button">HTML Validation</a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" class="validation-button">CSS Validation</a>
+            <a href="https://wave.webaim.org/report#/https://webpages.charlotte.edu/UNCCID/itis3135/hobby/" class="validation-button">Accessibility Validation</a>
+        </div>
+    </footer>
+
+    <script>
+        // javascript to handle section visibility and active button state
+        function showSection(sectionId) {
+            // hide sections
+            document.querySelectorAll('section').forEach((section) => {
+                section.classList.remove('active');
+            });
+            // show selected section
+            document.getElementById(sectionId).classList.add('active');
+
+            // remove active class from all buttons
+            document.querySelectorAll('nav a').forEach((link) => {
+                link.classList.remove('active');
+            });
+            // add active class to the clicked button
+            document.querySelector(`nav a[href="#${sectionId}"]`).classList.add('active');
+        }
+
+        // set the default section to "what" on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('what');
+        });
+    </script>
+</body>
+</html>
