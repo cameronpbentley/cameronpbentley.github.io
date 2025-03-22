@@ -263,3 +263,56 @@ h3 a:active {
         flex-direction: column;
     }
 }
+
+/* table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: center; /* center align  */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd; /* borders to cells */
+}
+
+table th {
+    background-color: #004e8c; /* header background color */
+    color: white; /* header text color */
+    font-weight: bold;
+    text-transform: uppercase; /* uppercase headers */
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9; /* alternate row colors */
+}
+
+table tr:hover {
+    background-color: #f1f1f1; /* hover effect */
+}
+
+/* center the caption */
+figcaption {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* ordered list */
+ol {
+    text-align: left; /* left align list */
+    margin: 20px auto;
+    padding-left: 40px;
+    max-width: 600px;
+}
+
+ol li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
