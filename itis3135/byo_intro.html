@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BYO Intro | Cameron Bentley's Cool Baboon | ITIS 3135</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h2>BYO Intro</h2>
+        <!-- user's information input -->
+        <div id="form-container">
+            <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+            
+            <form id="intro-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required value="Cameron Bentley">
+                </div>
+                
+                <div>
+                    <label for="mascot">Mascot:</label>
+                    <input type="text" id="mascot" name="mascot" required value="Curious Badger">
+                </div>
+                
+                <div>
+                    <label for="image">Image (PNG or JPG):</label>
+                    <input type="file" id="image" name="image" accept=".png,.jpg,.jpeg" required>
+                </div>
+                
+                <div>
+                    <label for="image-caption">Image Caption:</label>
+                    <input type="text" id="image-caption" name="image-caption" required value="Curious Badger mascot">
+                </div>
+                
+                <div>
+                    <label for="personal-bg">Personal Background:</label>
+                    <textarea id="personal-bg" name="personal-bg" required>I grew up around an hour from Charlotte and have always been interested in technology.</textarea>
+                </div>
+                
+                <div>
+                    <label for="professional-bg">Professional Background:</label>
+                    <textarea id="professional-bg" name="professional-bg" required>I've worked in the design field and currently aiming for an internship within computer science.</textarea>
+                </div>
+                
+                <div>
+                    <label for="academic-bg">Academic Background:</label>
+                    <textarea id="academic-bg" name="academic-bg" required>Currently pursuing a Master's degree in Computer Science at UNCC.</textarea>
+                </div>
+                
+                <div>
+                    <label for="web-bg">Background in Web Development:</label>
+                    <textarea id="web-bg" name="web-bg" required>I've taken several web development courses and built some personal projects.</textarea>
+                </div>
+                
+                <div>
+                    <label for="platform">Primary Computer Platform:</label>
+                    <input type="text" id="platform" name="platform" required value="Windows 11">
+                </div>
+                
+                <div id="courses-container">
+                    <label>Courses currently taking:</label>
+                    <div id="course-inputs">
+                        <div>
+                            <input type="text" class="course" name="course1" required value="ITIS 3135 - Web App Design and Development">
+                            <button type="button" class="delete-course">Delete</button>
+                        </div>
+                    </div>
+                    <button type="button" id="add-course">Add Another Course</button>
+                </div>
+                
+                <div>
+                    <label for="funny-thing">Funny thing?</label>
+                    <input type="text" id="funny-thing" name="funny-thing" value="I can solve a Rubik's cube in under 2 minutes">
+                </div>
+                
+                <div>
+                    <label for="anything-else">Anything else?</label>
+                    <input type="text" id="anything-else" name="anything-else" value="I love hiking, literature/poetry, and photography">
+                </div>
+                
+                <div>
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">I understand that what is on this page is not password protected and I will not put anything here that I don't want publicly available.</label>
+                </div>
+                
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+        
+        <div id="result-container" style="display: none;">
+            <!-- results will display here -->
+            <a href="#" id="reset-link">Reset Form</a>
+        </div>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/survey.js"></script>
+</body>
+</html>
