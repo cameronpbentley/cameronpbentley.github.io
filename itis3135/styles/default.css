@@ -317,3 +317,126 @@ ol li {
     line-height: 1.6;
 }
 
+/* project section containers */
+.project-section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* project section headings */
+.project-section-heading {
+    color: #004e8c;
+    border-bottom: 2px solid #004e8c;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* client info box */
+.client-info {
+    background-color: #f0f8ff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* page design table */
+.page-design-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.page-design-table th, 
+.page-design-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.page-design-table th {
+    background-color: #004e8c;
+    color: white;
+}
+
+.page-design-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* wireframe/sitemap */
+.project-section figure {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 800px;
+}
+
+.project-section figure img {
+    max-width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-section figcaption {
+    font-style: italic;
+    margin-top: 10px;
+    color: #666;
+}
+
+/* links project sections */
+.project-section a {
+    color: #004e8c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project-section a:hover {
+    text-decoration: underline;
+    color: #003366;
+}
+
+/* dynamic functionality list */
+.project-section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.project-section ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* responsive adjustments */
+@media (max-width: 768px) {
+    .page-design-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .project-section {
+        padding: 15px;
+    }
+    
+    .project-section-heading {
+        font-size: 1.2rem;
+    }
+}
+
+.project-section p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+.project-section strong {
+    color: #004e8c;
+    font-weight: 600;
+}
+
+.project-section br + •::before {
+    content: "• ";
+    color: #004e8c;
+    padding-right: 8px;
+}
