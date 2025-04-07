@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorShare - Recipe Sharing Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- header with nav -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">Flavor<span>Share</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#gallery" class="nav-link" data-page="gallery">Recipe Gallery</a></li>
+                    <li><a href="#submit" class="nav-link" data-page="submit">Submit Recipe</a></li>
+                    <li><a href="#profile" class="nav-link" data-page="profile">My Profile</a></li>
+                    <li><a href="#tips" class="nav-link" data-page="tips">Cooking Tips</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- main content - diff sections for each page -->
+    <main class="container">
+        <!-- home -->
+        <section id="home" class="page-content">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Share Your Culinary Creations</h1>
+                    <p>Discover and share delicious recipes with our community of home cooks</p>
+                    <a href="#submit" class="btn">Share Your Recipe</a>
+                </div>
+            </div>
+            
+            <div class="featured-recipes">
+                <h2 class="section-title">Featured Recipes</h2>
+                <div class="recipe-grid" id="featured-recipes">
+                    <!-- recipe cards loaded dynamically with javascript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- recipe gallery -->
+        <section id="gallery" class="page-content" style="display: none;">
+            <h2 class="section-title">Recipe Gallery</h2>
+            
+            <div class="filter-section">
+                <div class="filter-group">
+                    <h3>Categories</h3>
+                    <div class="filter-options" id="category-filters">
+                        <button class="filter-btn active" data-category="all">All</button>
+                        <button class="filter-btn" data-category="breakfast">Breakfast</button>
+                        <button class="filter-btn" data-category="lunch">Lunch</button>
+                        <button class="filter-btn" data-category="dinner">Dinner</button>
+                        <button class="filter-btn" data-category="dessert">Dessert</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Dietary Restrictions</h3>
+                    <div class="filter-options" id="diet-filters">
+                        <button class="filter-btn active" data-diet="all">All</button>
+                        <button class="filter-btn" data-diet="vegetarian">Vegetarian</button>
+                        <button class="filter-btn" data-diet="vegan">Vegan</button>
+                        <button class="filter-btn" data-diet="gluten-free">Gluten-Free</button>
+                        <button class="filter-btn" data-diet="dairy-free">Dairy-Free</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="recipe-grid" id="gallery-recipes">
+                <!-- loaded dynamically with JavaScript -->
+            </div>
+            
+            <div class="load-more-container" style="text-align: center; margin: 2rem 0;">
+                <button id="load-more-btn" class="btn">Load More Recipes</button>
+            </div>
+        </section>
+
+        <!-- submit recipe -->
+        <section id="submit" class="page-content" style="display: none;">
+            <h2 class="section-title">Share Your Recipe</h2>
+            
+            <form id="recipe-form" class="recipe-form">
+                <div class="form-group">
+                    <label for="recipe-title">Recipe Title*</label>
+                    <input type="text" id="recipe-title" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="recipe-description">Description*</label>
+                    <textarea id="recipe-description" class="form-control" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="recipe-category">Category*</label>
+                    <select id="recipe-category" class="form-control" required>
+                        <option value="">Select a category</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="dessert">Dessert</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Dietary Information</label>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <input type="checkbox" id="vegetarian" name="diet" value="vegetarian">
+                            <label for="vegetarian">Vegetarian</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="vegan" name="diet" value="vegan">
+                            <label for="vegan">Vegan</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="gluten-free" name="diet" value="gluten-free">
+                            <label for="gluten-free">Gluten-Free</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="dairy-free" name="diet" value="dairy-free">
+                            <label for="dairy-free">Dairy-Free</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Ingredients*</label>
+                    <div class="ingredient-list" id="ingredient-list">
+                        <div class="ingredient-item">
+                            <input type="text" placeholder="Ingredient (e.g., 1 cup flour)" class="form-control" required>
+                            <button type="button" class="remove-btn">×</button>
+                        </div>
+                    </div>
+                    <button type="button" class="add-btn" id="add-ingredient">Add Ingredient</button>
+                </div>
+                
+                <div class="form-group">
+                    <label>Instructions*</label>
+                    <div class="instruction-list" id="instruction-list">
+                        <div class="instruction-item">
+                            <textarea placeholder="Step 1: ..." class="form-control" required></textarea>
+                            <button type="button" class="remove-btn">×</button>
+                        </div>
+                    </div>
+                    <button type="button" class="add-btn" id="add-instruction">Add Step</button>
+                </div>
+                
+                <div class="form-group">
+                    <label for="recipe-image">Upload Image</label>
+                    <input type="file" id="recipe-image" class="form-control" accept="image/*">
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button type="submit" class="btn">Submit Recipe</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- user's profile -->
+        <section id="profile" class="page-content" style="display: none;">
+            <div class="profile-header">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Profile Picture" class="profile-pic">
+                <div class="profile-info">
+                    <h2>Sarah Johnson</h2>
+                    <p>Home cook and recipe enthusiast. Love sharing my kitchen experiments with the community!</p>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <strong>42</strong> Recipes
+                        </div>
+                        <div class="stat-item">
+                            <strong>128</strong> Followers
+                        </div>
+                        <div class="stat-item">
+                            <strong>56</strong> Following
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="section-title">My Recipes</h3>
+            <div class="recipe-grid" id="user-recipes">
+                <!-- will be loaded dynamically with JavaScript -->
+            </div>
+        </section>
+
+        <!-- cooking tips -->
+        <section id="tips" class="page-content" style="display: none;">
+            <h2 class="section-title">Cooking Tips & Techniques</h2>
+            
+            <div class="tips-container" id="tips-container">
+                <div class="tip-card">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Knife Skills" class="recipe-img">
+                    <div class="tip-content">
+                        <h3 class="tip-title">Knife Skills 101</h3>
+                        <p class="tip-excerpt">Learn the proper way to hold and use a chef's knife for efficient and safe chopping.</p>
+                        <a href="#" class="read-more">Read More</a>
+                        <div class="rating" data-tip-id="1">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tip-card">
+                    <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Seasoning" class="recipe-img">
+                    <div class="tip-content">
+                        <h3 class="tip-title">Seasoning Like a Pro</h3>
+                        <p class="tip-excerpt">Discover how to properly season your dishes to enhance flavors without over-salting.</p>
+                        <a href="#" class="read-more">Read More</a>
+                        <div class="rating" data-tip-id="2">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tip-card">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Meat Temperatures" class="recipe-img">
+                    <div class="tip-content">
+                        <h3 class="tip-title">Perfect Meat Temperatures</h3>
+                        <p class="tip-excerpt">A guide to cooking meats to the perfect doneness every time with temperature guidelines.</p>
+                        <a href="#" class="read-more">Read More</a>
+                        <div class="rating" data-tip-id="3">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="copyright">
+                &copy; 2025 FlavorShare. All rights reserved.
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Pinterest">Pinterest</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+            <div class="validation">
+                <a href="https://validator.w3.org/" target="_blank">HTML Validation</a> | 
+                <a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validation</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
