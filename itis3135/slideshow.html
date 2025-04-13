@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cameron Bentley | ITIS 3135 | Slideshow Gallery</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Slideshow Gallery</h2>
+        <div class="slideshow-container">
+            <!-- Slides for "Cameron Bentley" (14 letters in total) -->
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/camera.jpeg" alt="C - Camera">
+                    <figcaption>C - Camera (1st letter in Cameron)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/apple.jpeg" alt="A - Apple">
+                    <figcaption>A - Apple (2nd letter in Cameron)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/mug.jpeg" alt="M - Mug">
+                    <figcaption>M - Mug (3rd letter in Cameron)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/eraser.jpeg" alt="E - Eraser">
+                    <figcaption>E - Eraser (4th letter in Cameron)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/rose.jpeg" alt="R - Rose">
+                    <figcaption>R - Rose (5th letter in Cameron)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/orange.jpeg" alt="O - Orange">
+                    <figcaption>O - Orange (6th letter in Cameron)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/notebook.jpeg" alt="N - Notebook">
+                    <figcaption>N - Notebook (7th letter in Cameron)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/book.jpeg" alt="B - Books">
+                    <figcaption>B - Books (1st letter in Bentley)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/envelope.jpeg" alt="E - Envelope">
+                    <figcaption>E - Envelope (2nd letter in Bentley)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/necklace.jpeg" alt="N - Necklace">
+                    <figcaption>N - Necklace (3rd letter in Bentley)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/telescope.jpeg" alt="T - Telescope">
+                    <figcaption>T - Telescope (4th letter in Bentley)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/lamp.jpeg" alt="L - Lamp">
+                    <figcaption>L - Lamp (5th letter in Bentley)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/egg.jpeg" alt="E - Egg">
+                    <figcaption>E - Egg (6th letter in Bentley)</figcaption>
+                </figure>
+            </div>
+
+            <div class="mySlides fade">
+                <figure>
+                    <img src="images/yarn.jpeg" alt="Y - Yarn">
+                    <figcaption>Y - Yarn (7th letter in Bentley)</figcaption>
+                </figure>
+            </div>
+
+            <!-- next and prev buttons -->
+            <a class="slideshow-prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="slideshow-next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- dots/circles -->
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+            <span class="dot" onclick="currentSlide(10)"></span>
+            <span class="dot" onclick="currentSlide(11)"></span>
+            <span class="dot" onclick="currentSlide(12)"></span>
+            <span class="dot" onclick="currentSlide(13)"></span>
+            <span class="dot" onclick="currentSlide(14)"></span>
+        </div>
+
+        <div class="image-thumbnails">
+            <h3>Image Thumbnails</h3>
+            <div class="thumbnail-row">
+                <img src="images/camera.jpeg" alt="Camera" onclick="currentSlide(1)" class="thumbnail">
+                <img src="images/apple.jpeg" alt="Apple" onclick="currentSlide(2)" class="thumbnail">
+                <img src="images/mug.jpeg" alt="Mug" onclick="currentSlide(3)" class="thumbnail">
+                <img src="images/eraser.jpeg" alt="Eraser" onclick="currentSlide(4)" class="thumbnail">
+                <img src="images/rose.jpeg" alt="Rose" onclick="currentSlide(5)" class="thumbnail">
+                <img src="images/orange.jpeg" alt="Orange" onclick="currentSlide(6)" class="thumbnail">
+                <img src="images/notebook.jpeg" alt="Notebook" onclick="currentSlide(7)" class="thumbnail">
+                <img src="images/book.jpeg" alt="Books" onclick="currentSlide(8)" class="thumbnail">
+                <img src="images/envelope.jpeg" alt="Envelope" onclick="currentSlide(9)" class="thumbnail">
+                <img src="images/necklace.jpeg" alt="Necklace" onclick="currentSlide(10)" class="thumbnail">
+                <img src="images/telescope.jpeg" alt="Telescope" onclick="currentSlide(11)" class="thumbnail">
+                <img src="images/lamp.jpeg" alt="Lamp" onclick="currentSlide(12)" class="thumbnail">
+                <img src="images/egg.jpeg" alt="Egg" onclick="currentSlide(13)" class="thumbnail">
+                <img src="images/yarn.jpeg" alt="Yarn" onclick="currentSlide(14)" class="thumbnail">
+            </div>
+        </div>
+
+        <div class="ai-credits">
+            <h3>AI Image Credits</h3>
+            <p>All images were generated using Microsoft Designer Image Creator with these simple prompts:</p>
+            
+            <ul class="prompt-list">
+                <li><strong>C - Camera:</strong> "Professional camera on wood surface"</li>
+                <li><strong>A - Apple:</strong> "Shiny red apple closeup"</li>
+                <li><strong>M - Mug:</strong> "Steaming coffee mug"</li>
+                <li><strong>E - Eraser:</strong> "Pink eraser on paper"</li>
+                <li><strong>R - Rose:</strong> "Red rose with dew"</li>
+                <li><strong>O - Orange:</strong> "Fresh orange in sun"</li>
+                <li><strong>N - Notebook:</strong> "Open leather notebook"</li>
+                <li><strong>B - Books:</strong> "Book in cozy room"</li>
+                <li><strong>E - Envelope:</strong> "Envelope with wax seal"</li>
+                <li><strong>N - Necklace:</strong> "Silver necklace closeup"</li>
+                <li><strong>T - Telescope:</strong> "Brass telescope stargazing"</li>
+                <li><strong>L - Lamp:</strong> "Warm elegant lamp"</li>
+                <li><strong>E - Egg:</strong> "Colorful egg in nest"</li>
+                <li><strong>Y - Yarn:</strong> "Colorful yarn ball"</li>
+            </ul>
+        
+            <p class="disclaimer">Note: All images were AI-generated to match these simple descriptions.</p>
+        </div>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/slideshow.js"></script>
+</body>
+</html>
