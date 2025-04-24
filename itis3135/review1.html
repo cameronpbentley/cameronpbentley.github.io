@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Evaluation - Cutting Edge Kade</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        /* styling for evaluation page */
+        .evaluation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+        
+        .evaluation-section {
+            background-color: #f8f9fa;
+            border-radius: 6px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 4px solid #004e8c;
+        }
+        
+        .section-heading {
+            color: #004e8c;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .checklist-item {
+            margin-bottom: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .checklist-item strong {
+            color: #004e8c;
+            font-size: 1.1em;
+        }
+        
+        ul.checklist-details {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        
+        ul.checklist-details li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        ul.checklist-details li:before {
+            content: "•";
+            color: #004e8c;
+            font-weight: bold;
+            position: absolute;
+            left: 10px;
+        }
+        
+        .checkmark {
+            color: #28a745;
+            margin-right: 5px;
+        }
+        
+        .website-screenshot {
+            max-width: 100%;
+            margin: 20px auto;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .assessment-highlights {
+            background-color: #e9f7ef;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        
+        .assessment-highlights ul {
+            columns: 2;
+            column-gap: 30px;
+        }
+        
+        .assessment-highlights li {
+            margin-bottom: 10px;
+            break-inside: avoid;
+        }
+
+        /* link styling */
+        .website-link-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .website-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #004e8c;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 78, 140, 0.2);
+            border: 2px solid #004e8c;
+        }
+        
+        .website-link:hover {
+            background-color: #003b6f;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 78, 140, 0.3);
+        }
+        
+        .website-link:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 78, 140, 0.2);
+        }
+        
+        .website-link i {
+            margin-left: 8px;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .assessment-highlights ul {
+                columns: 1;
+            }
+            
+            .evaluation-section {
+                padding: 15px;
+            }
+            
+            .website-link {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+    <!-- for external link icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    
+    <main class="evaluation-container">
+        <h2>Evaluation of Cutting Edge Kade Salon</h2>
+        
+        <div class="website-link-container">
+            <a href="https://webpages.charlotte.edu/jwilban3/itis3135/client_project/index.html" target="_blank" class="website-link">
+                View Original Site <i class="fas fa-external-link-alt"></i>
+            </a>
+        </div>
+        
+        <figure>
+            <img src="images/peerreview1.JPG" alt="Screenshot of Cutting Edge Kade website" class="website-screenshot">
+            <figcaption>Original website screenshot for evaluation</figcaption>
+        </figure>
+        
+        <section class="evaluation-section">
+            <h3 class="section-heading">Checklist Assessment</h3>
+            <ol>
+                <li class="checklist-item">
+                    <strong>File/Folder Names</strong>
+                    <ul class="checklist-details">
+                        <li><span class="checkmark">✔️</span> All files use lowercase with no spaces</li>
+                        <li><span class="checkmark">✔️</span> Proper folder structure</li>
+                    </ul>
+                </li>
+                <li class="checklist-item">
+                    <strong>Design</strong>
+                    <ul class="checklist-details">
+                        <li><span class="checkmark">✔️</span> Good contrast (dark text on light background)</li>
+                        <li><span class="checkmark">✔️</span> Consistent fonts and colors</li>
+                        <li>CRAP Analysis:
+                            <ul class="checklist-details">
+                                <li><span class="checkmark">✔️</span> Contrast: Excellent readability</li>
+                                <li><span class="checkmark">✔️</span> Repetition: Consistent styling throughout</li>
+                                <li><span class="checkmark">✔️</span> Alignment: Properly aligned elements</li>
+                                <li><span class="checkmark">✔️</span> Proximity: Good grouping of related items</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="checklist-item">
+                    <strong>Page Structure</strong>
+                    <ul class="checklist-details">
+                        <li><span class="checkmark">✔️</span> Proper header, main, footer structure</li>
+                        <li><span class="checkmark">✔️</span> Navigation between header and main</li>
+                    </ul>
+                </li>
+                <li class="checklist-item">
+                    <strong>Header</strong>
+                    <ul class="checklist-details">
+                        <li><span class="checkmark">✔️</span> Contains brand name in h1</li>
+                        <li><span class="checkmark">✔️</span> Does not include page name in header</li>
+                    </ul>
+                </li>
+                <li class="checklist-item">
+                    <strong>Main Content</strong>
+                    <ul class="checklist-details">
+                        <li><span class="checkmark">✔️</span> Page name as h2</li>
+                        <li><span class="checkmark">✔️</span> Clear brand tagline present</li>
+                    </ul>
+                </li>
+                <li class="checklist-item">
+                    <strong>Footer</strong>
+                    <ul class="checklist-details">
+                        <li><span class="checkmark">✔️</span> Contains navigation menu</li>
+                        <li><span class="checkmark">✔️</span> Includes validation buttons</li>
+                        <li><span class="checkmark">✔️</span> Valid HTML and CSS</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+        
+        <section class="evaluation-section">
+            <h3 class="section-heading">Overall Assessment</h3>
+            <div class="assessment-highlights">
+                <p>The Cutting Edge Kade salon website demonstrates excellent adherence to web design standards. It scores perfectly against the evaluation checklist with:</p>
+                <ul>
+                    <li>Proper file naming and organization</li>
+                    <li>Strong visual design following CRAP principles</li>
+                    <li>Correct semantic HTML structure</li>
+                    <li>Complete header, navigation, main content, and footer sections</li>
+                    <li>Valid HTML and CSS</li>
+                </ul>
+            </div>
+            <p>The Cutting Edge Kade salon website radiates the same welcoming, personalized vibe you'd experience in the chair. From the friendly tone to the stylish visuals, it perfectly captures Kade's approachable professionalism and passion for making clients feel their best.</p>
+        </section>
+    </main>
+    
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
