@@ -189,6 +189,18 @@ footer {
     transform: translateY(-2px);
 }
 
+/* NEW: View recipe button styling */
+.btn-view-recipe {
+    background-color: var(--secondary-color);
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+}
+
+.btn-view-recipe:hover {
+    background-color: #0d7a7e;
+}
+
 .featured-recipes {
     margin: 2rem 0;
 }
@@ -197,7 +209,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-  }
+}
 
 .recipe-card {
     background-color: white;
@@ -205,6 +217,7 @@ footer {
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    position: relative;
 }
 
 .recipe-card:hover {
@@ -281,7 +294,7 @@ footer {
 }
 
 /* active state filter buttons */
-.filter-btn-active {
+.filter-btn.active {
     background-color: var(--primary-color);
     color: white;
     border-color: var(--primary-color);
@@ -433,6 +446,8 @@ textarea.form-control {
 
 .rating {
     margin-top: 1rem;
+    display: flex;
+    gap: 0.2rem;
 }
 
 .star {
@@ -442,13 +457,22 @@ textarea.form-control {
     transition: color 0.2s;
 }
 
-.star:hover {
+.star:hover,
+.star.active,
+.star.hovered {
     color: var(--accent-color);
 }
 
-/* active state stars */
-.star-active {
-    color: var(--accent-color);
+/* NEW: Form validation error styling */
+.error {
+    border-color: #ff6b6b !important;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    display: none;
 }
 
 /* responsive design */

@@ -124,10 +124,15 @@ function renderRecipes(recipesToRender, containerSelector) {
                     </div>
                     <div class="diet-badges">${dietBadges}</div>
                     <p>${recipe.description}</p>
-                    <a href="#" class="btn">View Recipe</a>
+                    <button class="btn btn-view-recipe">View Recipe</button>
                 </div>
             </div>
         `);
+        
+        // Add click handler for view recipe button
+        recipeCard.find('.btn-view-recipe').on('click', function() {
+            alert(`Viewing recipe: ${recipe.title}\n\nIn a full implementation, this would show the complete recipe with ingredients and instructions.`);
+        });
         
         container.append(recipeCard);
     });
@@ -246,7 +251,21 @@ $(document).ready(function() {
         });
         
         if (isValid) {
-            alert('Recipe submitted successfully! (In a real app, this would save to a database)');
+            // Create a more professional success message
+            const successMessage = $('<div class="success-message" style="background-color: #4CAF50; color: white; padding: 1rem; border-radius: 5px; margin-bottom: 1rem;">' +
+                'Recipe submitted successfully! (In a real app, this would save to a database)' +
+                '</div>');
+            
+            // Insert the message before the form
+            $(this).before(successMessage);
+            
+            // Remove the message after 5 seconds
+            setTimeout(() => {
+                successMessage.fadeOut(500, function() {
+                    $(this).remove();
+                });
+            }, 5000);
+            
             this.reset();
             // resets ingredient and instruction lists
             $('#ingredient-list').html('<div class="ingredient-item">' +
@@ -258,11 +277,24 @@ $(document).ready(function() {
                 '<button type="button" class="remove-btn">×</button>' +
                 '</div>');
         } else {
-            alert('Please fill in all required fields');
+            // Create a more professional error message
+            const errorMessage = $('<div class="error-message" style="background-color: #ff6b6b; color: white; padding: 1rem; border-radius: 5px; margin-bottom: 1rem;">' +
+                'Please fill in all required fields' +
+                '</div>');
+            
+            // Insert the message before the form
+            $(this).before(errorMessage);
+            
+            // Remove the message after 5 seconds
+            setTimeout(() => {
+                errorMessage.fadeOut(500, function() {
+                    $(this).remove();
+                });
+            }, 5000);
         }
     });
     
-    // star ratings
+    // star ratings - improved to highlight all stars up to clicked one
     $('.star').on('click', function() {
         const ratingContainer = $(this).parent();
         const value = $(this).data('value');
@@ -278,6 +310,22 @@ $(document).ready(function() {
         
         // in a real app, you would save this to a database
         console.log(`Rated tip ${ratingContainer.data('tip-id')} with ${value} stars`);
+    });
+    
+    // star ratings - hover effect to show what would be selected
+    $('.star').on('mouseover', function() {
+        const value = $(this).data('value');
+        $(this).parent().find('.star').each(function() {
+            if ($(this).data('value') <= value) {
+                $(this).addClass('hovered');
+            } else {
+                $(this).removeClass('hovered');
+            }
+        });
+    });
+    
+    $('.star').on('mouseout', function() {
+        $(this).parent().find('.star').removeClass('hovered');
     });
     
     // loads more recipes
